@@ -27,7 +27,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
+// Routes (mount under /api; when deployed with experimentalServices.backend.routePrefix, this becomes /_/backend/api)
 app.use('/api/auth', authRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/attendance', attendanceRoutes);
